@@ -3,6 +3,10 @@
   "name": "Mass Playlist Updater",
   "description": "This is a Chrome extension that allow users to delete or transfer their YouTube playlist videos in a single click.",
   "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
   "action": {
     "default_popup": "index.html"
   },
@@ -12,5 +16,11 @@
     "38": "assets/icon38.png",
     "48": "assets/icon48.png",
     "128": "assets/icon128.png"
-  }
+  },
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["*://*.youtube.com/*"]
+    }
+  ]
 }
