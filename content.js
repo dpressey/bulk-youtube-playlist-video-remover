@@ -2,12 +2,14 @@
     // TODO: add page functions 
     
     // gets the thumbnail, title, and channel name of the video
-    getVideosFromPlaylist(
+    function getVideosFromPlaylist(
         // fetch the element called: ytd-two-column-browse-results-renderer
         // drill into the element to find #contents or .ytd-section-list-renderer
         // drill into the element to find .ytd-item-section-renderer
         // drill into the element to find .ytd-playlist-video-list-renderer
+        let playlistContainer = document.querySelector("#contents.ytd-playlist-video-list-renderer");
         // create an object to hold the playlist videos
+        let playlistVideos = {};
         // iterate over the .ytd-playlist-video-list-renderer
             /* THUMBNAIL*/
 
@@ -28,5 +30,6 @@
             
 
     );
-    displayVideosInExtensionModal(); 
+
+    function displayVideosInExtensionModal(); 
 })();
